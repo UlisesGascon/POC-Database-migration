@@ -1,0 +1,22 @@
+{
+  "name": "old-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "infra:build": "docker-compose build",
+    "infra:start": "docker-compose up -V",
+    "infra:stop": "docker-compose down"
+  },
+  "author": "Ulises Gascon",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}

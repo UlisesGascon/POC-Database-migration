@@ -1,0 +1,19 @@
+{
+  "name": "new-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "infra:build": "docker-compose build",
+    "infra:start": "docker-compose up -V",
+    "infra:stop": "docker-compose down",
+    "infra:seed": "node ./seeds/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handy-postgres": "^1.2.2"
+  }
+}

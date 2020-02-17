@@ -1,0 +1,32 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+  </head>
+  <body cz-shortcut-listen="true">
+      <h1>Cool Quotes!</h1>
+      <h2>Welcome to this website!</h2>
+  
+    Some Quotes
+    <ul id="quotes">
+    </ul>
+    <script>
+        const QuotesSltr = document.getElementById("quotes")
+
+        const renderQuotes = data => {
+            QuotesSltr.innerHTML = data.map(item => `<li id="${item.id}" legacy_id="${item.legacy_id}">
+                <span>${item.quote}</span>
+                <span> - ${item.author}</span>
+            </li>`).join("")
+        }
+
+        fetch('/api/v1/quotes')
+        .then(res => res.json())
+        .then(renderQuotes)
+        .catch(console.err)
+
+
+    </script>
+  
+  </body>
+  
+  </html>

@@ -1,0 +1,2 @@
+SELECT *
+FROM quotes.quote

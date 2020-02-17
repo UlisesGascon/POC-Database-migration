@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+</head>
+<body>
+    <h1>Cool Quotes!</h1>
+    <h2>Welcome to this website!</h2>
+
+    </h3>Some Quotes</h3>
+    <ul>
+        <% for(var i=0; i<quotes.length; i++) {%>
+            <li id="<%= quotes[i]._id %>">
+                <span><%= quotes[i].quote %></span>
+                <span> - <%= quotes[i].author %></span>
+            </li>
+            <% } %>
+    </ul>
+
+    </h3>Some Quotes (RAW Data)</h3>
+    <pre><code><%= JSON.stringify(quotes, null, 2) %></code></pre>
+
+</body>
+</html>

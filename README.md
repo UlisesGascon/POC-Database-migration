@@ -26,3 +26,25 @@ Enter to `localhost:8081/quotes`
 ```bash
 npm run infra:stop
 ```
+
+
+## Manage the new server project
+
+### Start
+
+```bash
+cd new-server
+npm run infra:build
+npm run infra:start
+```
+
+### Check response
+
+- Enter to `localhost:8081/` for ajax render
+- Enter to `localhost:8081/api/v1/quotes` for API response
+
+### Stop
+
+```bash
+npm run infra:stop
+```

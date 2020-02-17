@@ -1,0 +1,13 @@
+{
+  "name": "data-migration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "infra:build": "docker-compose build",
+    "infra:start": "docker-compose up -V",
+    "infra:stop": "docker-compose down"
+  },
+  "author": "",
+  "license": "AGPL-3.0"
+}

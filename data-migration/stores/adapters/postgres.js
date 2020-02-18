@@ -29,7 +29,8 @@ const getQuote = async (id) => {
 }
 const addQuote = async (data) => {
     debug(`Adding new Quote: ${JSON.stringify(data)}`)
-    const { rows } = await pg.formattedQuery('insert-quote', [data.author, data.quote]);
+    const {legacy_id, author, quote} = data
+    const { rows } = await pg.formattedQuery('insert-quote', [legacy_id,  author, quote]);
     return rows;
 }
 

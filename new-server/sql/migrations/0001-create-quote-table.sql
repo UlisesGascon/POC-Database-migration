@@ -10,3 +10,4 @@ CREATE TABLE quotes.quote(
 );
 
 CREATE INDEX IF NOT EXISTS quote_id_idx ON quotes.quote(id);
+CREATE INDEX IF NOT EXISTS quote_legacy_id_idx ON quotes.quote(legacy_id);

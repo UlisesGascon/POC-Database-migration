@@ -6,7 +6,9 @@
   "scripts": {
     "migration:seed": "DEBUG=* node seed.js",
     "migration:start": "DEBUG=* node migration.js",
-
+    "migration:validation": "npm run test:unit; npm run test:e2e",
+    "test:unit": "DEBUG=* node validation.js",
+    "test:e2e": "echo \"Error: no test specified\" && exit 1",
     "infra:build": "docker-compose build",
     "infra:start": "docker-compose up -V",
     "infra:stop": "docker-compose down"
@@ -17,6 +19,7 @@
     "debug": "^4.1.1",
     "faker": "^4.1.0",
     "handy-postgres": "^1.2.2",
-    "mongodb": "^3.5.3"
+    "mongodb": "^3.5.3",
+    "winston": "^3.2.1"
   }
 }

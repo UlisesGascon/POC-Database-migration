@@ -22,11 +22,20 @@ const getAllQuotes = async () => {
     return rows;
 }
 
-const getQuote = async (id) => {
+const getQuoteById = async (id) => {
     debug(`Requesting single quote by id: ${id}`)
-    const { rows } = await pg.formattedQuery('select-quote', [id]);
-    return rows[0] || {};
+    const { rows } = await pg.formattedQuery('select-quote', ["id", id]);
+    return rows[0];
 }
+
+const getQuoteByLegacyId = async (id) => {
+    debug(`Requesting single quote by legacy_id: ${id}`)
+    const { rows } = await pg.formattedQuery('select-quote', ["legacy_id", id]);
+    return rows[0];
+}
+
+
+
 const addQuote = async (data) => {
     debug(`Adding new Quote: ${JSON.stringify(data)}`)
     const {legacy_id, author, quote} = data
@@ -34,4 +43,4 @@ const addQuote = async (data) => {
     return rows;
 }
 
-module.exports = { start, stop, getAllQuotes, getQuote, addQuote };
+module.exports = { start, stop, getAllQuotes, getQuoteById, getQuoteByLegacyId, addQuote };

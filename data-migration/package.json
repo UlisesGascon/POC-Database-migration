@@ -1,0 +1,28 @@
+{
+  "name": "data-migration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migration:seed": "DEBUG=* node seed.js",
+    "migration:start": "DEBUG=* node migration.js",
+    "migration:validation": "npm run test:unit; npm run test:e2e",
+    "test:unit": "DEBUG=* node validation.js",
+    "test:e2e": "NODE_ENV=test cypress run",
+    "cy:verify": "cypress verify",
+    "cy:open": "NODE_ENV=test cypress open",
+    "infra:build": "docker-compose build",
+    "infra:start": "docker-compose up -V",
+    "infra:stop": "docker-compose down"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "cypress": "^4.0.2",
+    "debug": "^4.1.1",
+    "faker": "^4.1.0",
+    "handy-postgres": "^1.2.2",
+    "mongodb": "^3.5.3",
+    "winston": "^3.2.1"
+  }
+}

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "migration:seed": "DEBUG=* node seed.js",
+    "migration:start": "DEBUG=* node migration.js",
 
     "infra:build": "docker-compose build",
     "infra:start": "docker-compose up -V",

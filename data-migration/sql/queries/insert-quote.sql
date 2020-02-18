@@ -1,3 +1,3 @@
-INSERT INTO quotes.quote (author, quote)
-VALUES (%L, %L)
+INSERT INTO quotes.quote (legacy_id, author, quote)
+VALUES (%L, %L, %L)
 RETURNING *;

@@ -17,6 +17,10 @@ module.exports = {
             ssl: false
         }
     },
+    urls: {
+        oldBaseUrl: "http://localhost:8081",
+        newBaseUrl: "http://localhost:8080"
+    },
     seeds: {
         total: 100
     }

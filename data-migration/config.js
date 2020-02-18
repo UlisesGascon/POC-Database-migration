@@ -18,6 +18,6 @@ module.exports = {
         }
     },
     seeds: {
-        total: 1000
+        total: 100
     }
 }

@@ -14,7 +14,8 @@ const exit = () => {
 
 const newDb = {
     getAllQuotes: postgres.getAllQuotes, 
-    getQuote: postgres.getQuote, 
+    getQuoteByLegacyId: postgres.getQuoteByLegacyId, 
+    getQuoteById: postgres.getQuoteById, 
     addQuote: postgres.addQuote
 };
 
